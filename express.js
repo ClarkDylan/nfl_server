@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const config = require('./config.js')[process.env.NODE_ENV || "dev"]
+const config = require('./config.js')[process.env.NODE_ENV || "production"]
 const PORT = config.port;
 
 const client = new Client({
